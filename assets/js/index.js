@@ -14,9 +14,11 @@ function playGame(playerChoice) {
         result = "IT'S A TIE";
     }
     else {
+        // switch cane be used instead of multiple if statements
         switch(playerChoice) {
             case "rock":
                 result = (computerChoice === "scissors") ? "YOU WIN!" : "YOU LOSE!"
+                // break terminates the loop
                 break;
             case "paper":
                 result = (computerChoice === "rock") ? "YOU WIN!" : "YOU LOSE!"
@@ -31,5 +33,14 @@ function playGame(playerChoice) {
     playerDisplay.textContent = `PLAYER: ${playerChoice}`;
     computerDisplay.textContent = `Computer: ${computerChoice}`;
     resultDisplay.textContent = result;
+
+    switch(result) {
+        case "YOU WIN!":
+            resultDisplay.classList.add("greenText");
+            break;
+        case "YOU LOSE!":
+            resultDisplay.classList.add("redText");
+            break;
+    }
 
 }
