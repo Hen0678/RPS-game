@@ -34,6 +34,9 @@ function playGame(playerChoice) {
     computerDisplay.textContent = `Computer: ${computerChoice}`;
     resultDisplay.textContent = result;
 
+    // This will remove green and red text and display black text if tie
+    resultDisplay.classList.remove("greenText", "redText");
+
     switch(result) {
         case "YOU WIN!":
             resultDisplay.classList.add("greenText");
