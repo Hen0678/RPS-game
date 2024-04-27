@@ -32,3 +32,12 @@ h1 {
 .choices button:hover {
     background-color: red;
 }
+
+#playerDisplay, #ComputerDisplay {
+    font-size: 2.5rem;
+}
+
+#resultDisplay {
+    font-size: 5rem;
+    margin: 30px ;
+}
