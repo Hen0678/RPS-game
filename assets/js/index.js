@@ -4,8 +4,10 @@ const choices = ["rock", "paper", "scissors"];
 const playerDisplay = document.getElementById("playerDisplay");
 const computerDisplay = document.getElementById("computerDisplay");
 const resultDisplay = document.getElementById("resultDisplay");
+// target the html with a preset of 0
 const playerScoreDisplay = document.getElementById("playerScoreDisplay");
 const computerScoreDisplay = document.getElementById("computerScoreDisplay");
+// start of game both player and computer have 0
 let playerScore = 0;
 let computerScore = 0;
 
@@ -44,12 +46,16 @@ function playGame(playerChoice) {
     switch(result) {
         case "YOU WIN!":
             resultDisplay.classList.add("greenText");
+            // Will add 1 to the player score
             playerScore++;
+             // Will display the player score
             playerScoreDisplay.textContent = playerScore;
             break;
         case "YOU LOSE!":
             resultDisplay.classList.add("redText");
+             // Will add 1 to the player score
             computerScore++;
+            // Will display the computer score
             computerScoreDisplay.textContent = computerScore;
             break;
             
